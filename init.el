@@ -6,13 +6,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(rg timu-rouge-theme)))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(use-package magit
+  :ensure t)
 (load-theme 'timu-rouge t)
 (use-package timu-rouge-theme
     :ensure t
@@ -27,3 +29,11 @@
       grep-use-null-device nil)
 (setq backup-directory-alist '(("." . "~/emacs.d/autosaves")))
 (setq create-lockfiles nil)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq-default standard-indent 4)
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode t)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
