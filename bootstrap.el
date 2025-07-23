@@ -1,0 +1,5 @@
+(defvar path (expand-file-name ".emacs" (getenv "USERPROFILE")))
+(setq user-emacs-directory (file-name-directory path))
+(defvar file (concat path "/init.el"))
+(when (file-exists-p file)
+  (load file))
